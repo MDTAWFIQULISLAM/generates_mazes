@@ -4,15 +4,11 @@ This is a Flutter-based Maze Generator Game application. The app generates a ran
 
 Features
 
-Random Maze Generation: Generates a random maze using a depth-first search algorithm.
-
-Player Navigation: Navigate the maze with on-screen controls.
-
-Toggle Solution: Show or hide the solution path.
-
-Timer: Tracks the time taken to complete the maze.
-
-Winner Screen: Displays the time taken to complete the maze once the player reaches the end.
+-Random Maze Generation: Generates a random maze using a depth-first search algorithm.
+-Player Navigation: Navigate the maze with on-screen controls.
+-Toggle Solution: Show or hide the solution path.
+-Timer: Tracks the time taken to complete the maze.
+-Winner Screen: Displays the time taken to complete the maze once the player reaches the end.
 
 
 
