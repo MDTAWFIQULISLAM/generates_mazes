@@ -1,6 +1,6 @@
 import 'dart:math';
 
-/// This class handles the generation of the maze and the solution path.
+/// Generates a maze using a randomized depth-first search algorithm.
 class MazeGenerator {
   final int rows;
   final int cols;
@@ -15,7 +15,7 @@ class MazeGenerator {
     _createPath(0, 0);
   }
 
-  /// Generates a maze using Depth-First Search (DFS) algorithm.
+  /// Recursively creates a path in the maze using randomized depth-first search.
   void _createPath(int x, int y) {
     List<int> directions = [0, 1, 2, 3];
     directions.shuffle(Random());
@@ -47,7 +47,7 @@ class MazeGenerator {
     }
   }
 
-  /// Finds the solution path from start to end.
+  /// Recursively finds a path from the start to the end of the maze.
   bool _findPath(int x, int y) {
     if (x == cols - 1 && y == rows - 1) {
       solutionPath.add([x, y]);

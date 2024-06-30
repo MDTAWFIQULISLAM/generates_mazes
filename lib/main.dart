@@ -3,6 +3,7 @@ import 'pages/start_page.dart';
 
 void main() => runApp(MazeApp());
 
+/// The root of the Maze application.
 class MazeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

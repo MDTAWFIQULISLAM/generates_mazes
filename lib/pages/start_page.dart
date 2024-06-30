@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'maze_page.dart';
 
+/// The initial page of the application that allows the user to start the maze game.
 class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

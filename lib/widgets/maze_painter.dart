@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// This class handles the painting of the maze and the solution path.
+// Custom painter for drawing the maze.
 class MazePainter extends CustomPainter {
   final List<List<int>> maze;
   final List<List<int>>? solutionPath;
@@ -12,7 +12,11 @@ class MazePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
       ..color = Colors.black
-      ..strokeWidth = 2.0;
+      ..strokeWidth = 4.0;
+
+    final boundaryPaint = Paint()
+      ..color = Colors.black
+      ..strokeWidth = 4.0;
 
     for (int y = 0; y < maze.length; y++) {
       for (int x = 0; x < maze[y].length; x++) {
@@ -22,7 +26,7 @@ class MazePainter extends CustomPainter {
             canvas.drawLine(
               Offset(x * cellSize, y * cellSize),
               Offset((x + 1) * cellSize, y * cellSize),
-              paint,
+              y == 0 ? boundaryPaint : paint,
             );
           }
           // Draw left line
@@ -30,7 +34,7 @@ class MazePainter extends CustomPainter {
             canvas.drawLine(
               Offset(x * cellSize, y * cellSize),
               Offset(x * cellSize, (y + 1) * cellSize),
-              paint,
+              x == 0 ? boundaryPaint : paint,
             );
           }
           // Draw bottom line
@@ -38,7 +42,7 @@ class MazePainter extends CustomPainter {
             canvas.drawLine(
               Offset(x * cellSize, (y + 1) * cellSize),
               Offset((x + 1) * cellSize, (y + 1) * cellSize),
-              paint,
+              y == maze.length - 1 ? boundaryPaint : paint,
             );
           }
           // Draw right line
@@ -46,7 +50,7 @@ class MazePainter extends CustomPainter {
             canvas.drawLine(
               Offset((x + 1) * cellSize, y * cellSize),
               Offset((x + 1) * cellSize, (y + 1) * cellSize),
-              paint,
+              x == maze[y].length - 1 ? boundaryPaint : paint,
             );
           }
         }
