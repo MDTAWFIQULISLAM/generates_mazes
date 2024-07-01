@@ -1,4 +1,4 @@
-#Developer Tawfiqul Islam
+# Developer Tawfiqul Islam
 
 # Maze Generator Game
 
